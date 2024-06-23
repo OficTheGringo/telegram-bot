@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOT TheGringo</title>
+   <link rel="licon" href="logo.ico"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+        header {
+            width: 100%;
+            background-color: #282c34;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            color: white;
+        }
+        .top-right-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .button, .button-blue, .button-share, .button-copy {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            color: white;
+            background: none;
+            border: 1px solid white;
+        }
+        .button-share:hover, .button-copy:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        main {
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+        h1, h2, h3 {
+            color: #444;
+        }
+        h1.highlight {
+            color: red;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .center {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .button {
+            background-color: purple;
+        }
+        .button-blue {
+            background-color: blue;
+        }
+        footer {
+            width: 100%;
+            background-color: #282c34;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function sharePage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'BOT TheGringo',
+                    url: window.location.href
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch(console.error);
+            } else {
+                alert('La API de compartir no es compatible con tu navegador.');
+            }
+        }
+
+        function copyURL() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('URL copiada al portapapeles');
+            }).catch(err => {
+                console.error('Error al copiar el URL: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>THE GRINGO BOT</h1>
+        <div class="top-right-buttons">
+            <button class="button-copy" onclick="copyURL()">Copiar URL</button>
+            <button class="button-share" onclick="sharePage()">Compartir</button>
+        </div>
+    </header>
+    <main>
+        <div class="center">
+            <h1 class="highlight">Disponible solo en Telegram</h1>
+            <hr>
+        </div>
+        <h2>TheGringo Bot V2.1.1</h2>
+        <p>Un bot con botones y herramientas muy funcional que te van a gustar. Puedes encontrar Virus de databases, Phishing, Virus apks, entre otras más.</p>
+        <p>Algunas de las informaciones del bot son sacadas de diferentes páginas webs. Soy el creador de algunos archivos, no me hago responsable del mal uso que le den cada uno de ustedes. Puedes obtener nuestro bot en el siguiente enlace o buscando en la aplicación de Telegram nuestro usuario: @theGringo_bot</p>
+        <div class="center">
+            <a href="https://t.me/theGringo_bot" class="button">👉Ir al Bot en Telegram👈</a>
+        </div>
+        <p>Hago resaltar nuevamente que no me hago responsable que se pueda hacer con la información proporcionada. Es responsabilidad de cada individuo utilizar estos recursos con ética y consideración a los demás. La información compartida debe ser verificada y utilizada de manera responsable, evitando hacer daño o perjudicar a las demás personas.</p>
+        <p>Mientras la tecnología ofrece oportunidades emocionantes, es esencial mantener una actitud cautelosa y ética en su uso. El acceso a datos personales y sensibles debe ser gestionado con cuidado y respeto por la privacidad de las demás personas.</p>
+        <h3>Date una Vuelta por mi WhatsApp Business:</h3>
+        <div class="center">
+            <a href="https://wa.me//+50761803843" class="button-blue">Business</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 TheGringo Bot. Todos los derechos reservados.</p>
+<p>20 de junio de 2024 | Panamá Chiriquí | TheGringo</p>
+    </footer>
+</body>
+</html>
